@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+  <% if @product.foto.attached? %>
+    <%= image_tag url_for(@product.foto) %>
+  <% end %>
+</p>
+
+<p>
   <strong>Nome:</strong>
   <%= @product.nome %>
 </p>
