@@ -2,9 +2,10 @@
 
 <h1>Products</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
+      <th>Foto</th>
       <th>Nome</th>
       <th>Ingredienti</th>
       <th>Prezzo</th>
@@ -17,15 +18,15 @@
       <tr>
         <td>
           <% if product.foto.attached? %>
-            <%= image_tag url_for(product.foto) %>
+            <%= image_tag url_for(product.foto), style: 'width: 200px' %>
           <% end %>
         </td>
         <td><%= product.nome %></td>
         <td><%= product.ingredienti %></td>
         <td><%= product.prezzo %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostra', product, class: 'btn btn-sm btn-primary'%></td>
+        <td><%= link_to 'Edita', edit_product_path(product), class: 'btn btn-sm btn-warning' %></td>
+        <td><%= link_to 'Cancella', product, method: :delete, data: { confirm: 'Sei sicuro?' }, class: 'btn btn-sm btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -33,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<%= link_to 'Nuovo prodotto', new_product_path , class: 'btn btn-primary w-100' %>

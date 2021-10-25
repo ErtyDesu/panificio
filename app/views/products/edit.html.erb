@@ -1,6 +1,7 @@
-<h1>Editing Product</h1>
+<h1>Modifica prodotto</h1>
 
 <%= render 'form', product: @product %>
 
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+<br>
+<%= link_to 'Mostra', @product, class: 'btn btn-sm btn-primary' %> 
+<%= link_to 'Indietro', products_path, class: 'btn btn-sm btn-warning   ' %>

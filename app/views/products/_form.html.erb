@@ -11,28 +11,33 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome %>
+  <div class="mb-3">
+    <%= form.label :nome, class:'form-label' %>
+    <%= form.text_field :nome, class:'form-control' %>
+    <div class="form-text">Non dimenticare le maiuscole</div>
   </div>
 
   <div class="field">
-    <%= form.label :ingredienti %>
-    <%= form.text_area :ingredienti %>
+    <%= form.label :ingredienti, class:'form-label' %>
+    <%= form.text_area :ingredienti, class:'form-control' %>
+    <div class="form-text">Non dimenticare le maiuscole</div>
   </div>
 
   <div class="field">
-    <%= form.label :prezzo %>
-    <%= form.text_field :prezzo %>
+    <%= form.label :prezzo, class:'form-label' %>
+    <%= form.text_field :prezzo, class:'form-control' %>
+    <div class="form-text">Non dimenticare le maiuscole</div>
   </div>
 
   <div class="field">
-    <%= form.label :foto %>
-    <%= form.file_field :foto %>
+    <%= form.label :foto, class:'form-label' %>
+    <%= form.file_field :foto, class:'form-control' %>
   </div>
+
+<br>
 
   <div class="actions">
-    <%= form.submit 'SALVA', class: 'btn btn-primary w-100'%>
+    <%= form.submit 'Salva', class: 'btn btn-success w-100'%>
   </div>
   
 <% end %>
